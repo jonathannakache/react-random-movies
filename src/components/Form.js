@@ -5,7 +5,7 @@ class Form extends Component {
     super(props);
 
     this.state = {
-      movie: ''
+      movie: ""
     };
   }
 
@@ -14,7 +14,6 @@ class Form extends Component {
       [evt.target.name]: evt.target.value
     });
   };
-  
 
   handleSubmit = evt => {
     evt.preventDefault();
@@ -24,12 +23,12 @@ class Form extends Component {
     });
   };
   render() {
-
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="movie">Movie :</label>
         <input
-          type="text"
+          autoComplete="off"
+          type="search"
           name="movie"
           id="movie"
           value={this.state.movie}
